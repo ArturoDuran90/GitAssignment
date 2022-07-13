@@ -1,19 +1,33 @@
 h1{
-    color: #FFA500;
+    color: black;
+    font-weight: bolder;
+    font-size: 60px;
 }
-
-.board {
-    background-image: url("NimAssets\Dirt Texture.jpeg");
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: url(./NimAssets/DirtTexture.jpeg) no-repeat center center fixed, black;
+}
+button {
+    width: auto;
+    font-size: 20px;
+}
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
     display: flex;
 }
-
-.piece {
-    padding-left: 22px;
+.center { 
+    justify-content: center; 
 }
-
-/* #usernamePage {
-    width: auto;
-    height: auto;
-    align-items: center;
-} */
-
+.piece {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center; 
+}
+.piece {
+    padding: 5px;
+    margin: 5px;
+}

@@ -15,6 +15,7 @@ exports.game_screen = (req, res) => {
 exports.user_screen = (req, res) => {
     //When someone makes a request on the root level of a web server, respond with this function
     res.sendFile(path.join(__dirname, views + '/user.html'));
+};
     
 exports.options_screen = (req, res) => {
     //When someone makes a request on the root level of a web server, respond with this function

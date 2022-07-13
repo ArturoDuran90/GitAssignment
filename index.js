@@ -8,6 +8,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('/', routes.index);
 app.get('/game', routes.game_screen);
+app.get('/options', routes.options_screen);
 
 // router.get('/game', (req, res) => {
 //     app.get('/game', routes.game_screen);//adding stuff not so successfully

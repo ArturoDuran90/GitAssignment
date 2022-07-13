@@ -27,7 +27,23 @@ button {
     display: flex;
     justify-content: center; 
 }
+<<<<<<< Updated upstream
 .piece {
     padding: 5px;
     margin: 5px;
+=======
+
+.Hints{
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+}
+
+.Instructions{
+    width: 300px;
+    border: 15px solid blue;
+    padding: 50px;
+    margin: 20px;
+>>>>>>> Stashed changes
 }

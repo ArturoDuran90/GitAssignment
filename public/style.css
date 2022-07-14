@@ -27,20 +27,31 @@ button {
     display: flex;
     justify-content: center; 
 }
-#homeButton {
-    top:0
+.piece {
+    padding: 5px;
+    margin: 5px;
 }
-
+p {
+    font-size: 20px;
+    background-color: black;
+    color:white;
+    padding: 2px;
+    margin: 2px;
+}
 .Hints{
-    width: 300px;
+    /* justify-content: center; */
     border: 15px solid green;
+    max-width: 300px;
     padding: 50px;
-    margin: 20px;
+    margin: 10px;
 }
 
-.Instructions{
-    width: 300px;
+/* .Instructions{
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     border: 15px solid blue;
+    max-width: 300px;
     padding: 50px;
-    margin: 20px;
-}
+    margin: 10px;
+} */

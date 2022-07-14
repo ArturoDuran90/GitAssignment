@@ -11,16 +11,17 @@
     <h1 style ="text-align:center";>NIM</h1>
     <div style ="text-align:center" id="usernamePage">
         <h2>Enter Username:</h2>
-        <input type='text' placeholder='Username 1'/>
-        <input type='text' placeholder='Username 2'/>
+        <form method="post" style ="text-align:center" action="./board.html">
+            <input type='text' id= "userOneInput" placeholder='Username 1'/>
+            <input type='text' id= "userTwoInput" placeholder='Username 2'/>
+            <input type="submit" value="Begin" action="/game" onclick="userInput()" placeholder="Begin">
+        </form>
     </div>
-    <br>
-    <form style ="text-align:center" action="./board.html">
-        <button type="submit" value="Begin" action="/game"> Begin </button>
-    </form>
-    <br/>
-    <form style ="text-align:center" action="./index.html">
+    <form id="homeButton" action="./index.html">
         <button type="submit" value="Home" action="/game"> Home </button>
     </form>
+    <script src="/script.js">
+
+    </script>
 </body>
 </html>

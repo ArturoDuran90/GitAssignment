@@ -1,5 +1,10 @@
-player_one = "p1";
-player_two = "p2";
+
+function userInput(){
+    var player_one = document.querySelector("#userOneInput").value;
+    sessionStorage.setItem("userOne", player_one);
+    var player_two = document.querySelector("#userTwoInput").value;
+    sessionStorage.setItem("userTwo", player_two);
+}
 
 piece_taken = 0;
 

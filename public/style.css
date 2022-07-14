@@ -31,6 +31,13 @@ button {
     padding: 5px;
     margin: 5px;
 }
+p {
+    font-size: 20px;
+    background-color: black;
+    color:white;
+    padding: 2px;
+    margin: 2px;
+}
 .Hints{
     /* justify-content: center; */
     border: 15px solid green;
@@ -39,12 +46,12 @@ button {
     margin: 10px;
 }
 
-.Instructions{
-    /* justify-content: center;
+/* .Instructions{
+    justify-content: center;
     align-content: center;
-    align-items: center; */
+    align-items: center;
     border: 15px solid blue;
     max-width: 300px;
     padding: 50px;
     margin: 10px;
-}
+} */

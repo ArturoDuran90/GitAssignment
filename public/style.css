@@ -27,23 +27,24 @@ button {
     display: flex;
     justify-content: center; 
 }
-<<<<<<< Updated upstream
 .piece {
     padding: 5px;
     margin: 5px;
-=======
-
+}
 .Hints{
-    width: 300px;
+    /* justify-content: center; */
     border: 15px solid green;
+    max-width: 300px;
     padding: 50px;
-    margin: 20px;
+    margin: 10px;
 }
 
 .Instructions{
-    width: 300px;
+    /* justify-content: center;
+    align-content: center;
+    align-items: center; */
     border: 15px solid blue;
+    max-width: 300px;
     padding: 50px;
-    margin: 20px;
->>>>>>> Stashed changes
+    margin: 10px;
 }

@@ -2,7 +2,9 @@ player_one = "p1";
 player_two = "p2";
 
 piece_taken = 0;
+deleted_piece = 0;
 
+const takePiece = document.getElementById('takePiece');
 const board = document.getElementsByClassName('board flex-container center');
 const piece = document.getElementsByClassName('piece');
 const pieceOne = document.getElementById('pieceOne');
@@ -16,58 +18,27 @@ const pieceEight = document.getElementById('pieceEight');
 const pieceNine = document.getElementById('pieceNine');
 const pieceTen = document.getElementById('pieceTen');
 
-function main() {
-    handleClick();
-}
+nim_board = [pieceOne, pieceTwo, pieceThree, pieceFour, pieceFive, pieceSix, pieceSeven, pieceEight, pieceNine, pieceTen];
 
-const handleClick = evt => {
-    if(evt.target.id == pieceOne) {
-        console.log(piece_taken)
-        piece_taken +=1;
-        pieceOne.innerHTML = "";
-    }
-    if(evt.target.id == pieceTwo) {
-        console.log(piece_taken)
-        piece_taken +=1;
-        
-    }if(evt.target.id == pieceOne) {
-        console.log(piece_taken)
-        piece_taken +=1;
-        
-    }if(evt.target.id == pieceOne) {
-        console.log(piece_taken)
-        piece_taken +=1;
-        
-    }if(evt.target.id == pieceOne) {
-        console.log(piece_taken)
-        piece_taken +=1;
-        
-    }if(evt.target.id == pieceOne) {
-        console.log(piece_taken)
-        piece_taken +=1;
-        
-    }if(evt.target.id == pieceOne) {
-        console.log(piece_taken)
-        piece_taken +=1;
-        
-    }if(evt.target.id == pieceOne) {
-        console.log(piece_taken)
-        piece_taken +=1;
-        
-    }if(evt.target.id == pieceOne) {
-        console.log(piece_taken)
-        piece_taken +=1;
-        
-    }if(evt.target.id == pieceOne) {
-        console.log(piece_taken)
-        piece_taken +=1;
-        
+function handleClick(evt) {
+    if(evt.target.id == "takePiece") {
+        if(piece_taken == 3) {
+            endTurn();
+        } else {
+            nim_board[deleted_piece].innerHTML = "";
+            deleted_piece += 1;
+            piece_taken += 1;
+            console.log(piece_taken);
+        }
     }
     
 }
 
-main();
+function endTurn() {
 
+}
+
+takePiece.addEventListener('click', handleClick);
 pieceOne.addEventListener('click', handleClick);
 pieceTwo.addEventListener('click', handleClick);
 pieceThree.addEventListener('click', handleClick);

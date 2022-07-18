@@ -56,6 +56,13 @@ p {
     padding: 50px;
     margin: 10px;
 }
+#takePiece {
+   text-align: center;
+}
+
+#end_turn {
+   text-align: center;
+}
 
 /* .Instructions{
     justify-content: center;

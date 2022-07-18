@@ -44,6 +44,11 @@ p {
     font-size: 64px;
     text-align: center;
 }
+#playerNumTaken {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    text-align: center;
+}
 .Hints{
     /* justify-content: center; */
     border: 15px solid green;

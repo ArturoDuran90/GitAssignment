@@ -1,5 +1,5 @@
-player_one = "p1";
-player_two = "p2";
+player_one="Player One";
+player_two="Player Two";
 
 piece_taken = 0;
 deleted_piece = 0;
@@ -8,7 +8,7 @@ player = true;
 
 const takePiece = document.getElementById('takePiece');
 const playerTurn = document.getElementById('playerTurnText');
-const end_turn = document.getElementById('end_turn');
+const numTaken = document.getElementById('playerNumTaken');
 const board = document.getElementsByClassName('board flex-container center');
 const piece = document.getElementsByClassName('piece');
 const pieceOne = document.getElementById('pieceOne');
@@ -26,6 +26,7 @@ nim_board = [pieceOne, pieceTwo, pieceThree, pieceFour, pieceFive, pieceSix, pie
 
 function handleClick(evt) {
     if(deleted_piece <=9){
+        numTaken.innerHTML = piece_taken + " taken";
         if(evt.target.id == "takePiece") {
             if(piece_taken == 3) {
                 determineWinner()
@@ -34,6 +35,7 @@ function handleClick(evt) {
                 nim_board[deleted_piece].innerHTML = "";
                 deleted_piece += 1;
                 piece_taken += 1;
+                numTaken.innerHTML = piece_taken + " taken";
                 console.log(piece_taken);
             }
         }
@@ -42,13 +44,14 @@ function handleClick(evt) {
     }
     determineWinner()
 }
+
 function determineWinner(){
     if(deleted_piece >=10){
         if(player==true){
-            playerTurn.innerHTML="Player Two Wins!";
+            playerTurn.innerHTML= player_two + " Wins!";
             console.log("Player Two Wins")
         }else if(player==false){
-            playerTurn.innerHTML="Player One Wins!";
+            playerTurn.innerHTML=player_one +" Wins!";
             console.log("Player One Wins")
         }
     }else{
@@ -58,10 +61,10 @@ function determineWinner(){
 
 function determinePlayer(){
     if(player==true){
-        playerTurn.innerHTML="Player One";
+        playerTurn.innerHTML=player_one +" turn";
         player=false;
     }else if(player==false){
-        playerTurn.innerHTML="Player Two";
+        playerTurn.innerHTML=player_two +" turn";
         player=true;
     }
 }
@@ -72,6 +75,7 @@ function endTurn() {
     }else{
         console.log(deleted_piece + " taken")
         piece_taken=0;
+        numTaken.innerHTML = piece_taken + " taken";
         determinePlayer()
         determineWinner()
         console.log(player)
@@ -79,6 +83,7 @@ function endTurn() {
     }
     
 }
+numTaken.innerHTML = piece_taken + " taken";
 determinePlayer()
 
 takePiece.addEventListener('click', handleClick);

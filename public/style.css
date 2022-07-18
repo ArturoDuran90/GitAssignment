@@ -38,6 +38,10 @@ p {
     padding: 2px;
     margin: 2px;
 }
+
+#homeButton {
+    top: 0;
+}
 .Hints{
     /* justify-content: center; */
     border: 15px solid green;

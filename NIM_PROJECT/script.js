@@ -29,7 +29,7 @@ function handleClick(evt) {
         if(evt.target.id == "takePiece") {
             if(piece_taken == 3) {
                 determineWinner()
-                endTurn();
+                playerTurn.innerHTML="Cannot take any more pieces. Please click End Turn."
             } else {
                 nim_board[deleted_piece].innerHTML = "";
                 deleted_piece += 1;
@@ -40,7 +40,7 @@ function handleClick(evt) {
     }else{
         console.log("Game Still in Play");
     }
-    
+    determineWinner()
 }
 function determineWinner(){
     if(deleted_piece >=10){
@@ -67,12 +67,17 @@ function determinePlayer(){
 }
 
 function endTurn() {
-    console.log(deleted_piece + " taken")
-    piece_taken=0;
-    determinePlayer()
-    determineWinner()
-    console.log(player)
-    console.log("Turn Ended.")
+    if(piece_taken<=0){
+        playerTurn.innerHTML="You must take at least one piece."
+    }else{
+        console.log(deleted_piece + " taken")
+        piece_taken=0;
+        determinePlayer()
+        determineWinner()
+        console.log(player)
+        console.log("Turn Ended.")
+    }
+    
 }
 determinePlayer()
 

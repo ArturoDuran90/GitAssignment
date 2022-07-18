@@ -38,6 +38,12 @@ p {
     padding: 2px;
     margin: 2px;
 }
+
+#playerTurnText {
+    color: rgb(255, 255, 255);
+    font-size: 64px;
+    text-align: center;
+}
 .Hints{
     /* justify-content: center; */
     border: 15px solid green;
